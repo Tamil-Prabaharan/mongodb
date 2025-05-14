@@ -1,0 +1,20 @@
+How to Remove column or field in mongoDB?
+
+syntax:
+db.collectionname.update(({},{$unset:{fieldname:1}},{multi:1})
+
+note:
+multi:1 -----> To remove all rows fields.
+
+ex:
+db.emp.update({},{$unset:{ename:1}})
+
+db.emp.update({},{$unset:{ename:1}},{multi:1})
+
+  Mongodbdb 6 version onwards:
+==================================
+db.collectionname.updateMany({},{$unset:{fieldname:1}})
+db.collectionname.updateOne({},{$unset:{fieldname:1}})
+
+
+

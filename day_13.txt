@@ -1,0 +1,13 @@
+Syntax of delete() method:
+===========================
+db.collection_name.deleteOne({delete_criteria})
+ex:
+db.students.deleteOne({"sname":"umesh"})
+Output:
+WriteResult({ "nRemoved" : 1 })
+
+Remove all Documents
+=====================
+db.collection_name.deleteMany({})
+output:
+{ acknowledged: true, deletedCount: 3 }
